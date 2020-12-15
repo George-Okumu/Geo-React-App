@@ -9,46 +9,28 @@ import React, {Component} from 'react'
 const TableHeader = () => {
 
         return (
-            <thead>
-                <tr>
-                    <th>Student</th>
-                    <th>Grade/Marks</th>
-                </tr>
-            </thead>
+            <thead />
         )
 
 }
 
 const TableBody = () => {
     return(
-        <tbody>
-        <tr>
-          <td>Charlie</td>
-          <td>B+</td>
-        </tr>
-        <tr>
-          <td>Mac</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>Dee</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>Dennis</td>
-          <td>B</td>
-        </tr>
-      </tbody>
+        <tbody />
     )
 }
 
 // Using class component to render TableHeader and TableBody
 class Table extends Component {
     render () {
+        // Accessing stiudentsGrade Data here
+
+        const {studentsMarks}  = this.props
+
         return(
             <table>
                 <TableHeader />
-                <TableBody />
+                <TableBody studentsMarks={studentsMarks}/>
             </table>
         )
     }
