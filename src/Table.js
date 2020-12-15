@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 
 
-
+// A class component must include render(), and the return can only return one parent element.
+// Note that if the return is contained to one line, it does not need parentheses.
 
 // Introduction of Simple  components
 
