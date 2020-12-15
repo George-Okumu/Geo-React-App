@@ -1,37 +1,4 @@
 import React, {Component} from 'react'
-// Class Component
-// class Table extends Component{
-//     render (){
-//         return(
-//             <table>
-//             <thead>
-//               <tr>
-//                 <th>Name</th>
-//                 <th>Job</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               <tr>
-//                 <td>George</td>
-//                 <td>Junior Dev</td>
-//               </tr>
-//               <tr>
-//                 <td>Tom</td>
-//                 <td>Painter</td>
-//               </tr>
-//               <tr>
-//                 <td>Dee</td>
-//                 <td>Aspiring actress</td>
-//               </tr>
-//               <tr>
-//                 <td>Vivian</td>
-//                 <td>Scholar</td>
-//               </tr>
-//             </tbody>
-//           </table>
-//         )
-//     }
-// }
 
 
 
@@ -49,6 +16,41 @@ const TableHeader = () => {
             </thead>
         )
 
+}
+
+const TableBody = () => {
+    return(
+        <tbody>
+        <tr>
+          <td>Charlie</td>
+          <td>B+</td>
+        </tr>
+        <tr>
+          <td>Mac</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>Dee</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Dennis</td>
+          <td>B</td>
+        </tr>
+      </tbody>
+    )
+}
+
+// Using class component to render TableHeader and TableBody
+class Table extends Component {
+    render () {
+        return(
+            <table>
+                <TableHeader />
+                <TableBody />
+            </table>
+        )
+    }
 }
 
 export default Table
