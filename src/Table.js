@@ -14,11 +14,20 @@ const TableHeader = () => {
 
 }
 
-const TableBody = () => {
-    return(
-        <tbody />
-    )
-}
+const TableBody = (props) => {
+    const rows = props.studentsMarks.map((row, index) => {
+      return (
+        //   use Key everytime when making lists in React
+        <tr key={index}>
+          <td>{row.name}</td>
+          <td>{row.grade}</td>
+        </tr>
+      )
+    })
+  
+    return <tbody>{rows}</tbody>
+  }
+
 
 // Using class component to render TableHeader and TableBody
 class Table extends Component {
